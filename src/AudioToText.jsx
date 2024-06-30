@@ -39,7 +39,7 @@ const AudioToText = () => {
         formData,
         {
           headers: {
-            Authorization: `Bearer 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`, // Replace with your actual API token
+            Authorization: `Bearer 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`, // Replace with your actual API token
             'Content-Type': 'multipart/form-data',
           },
         }
