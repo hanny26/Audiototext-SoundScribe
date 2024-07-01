@@ -46,14 +46,14 @@ SoundScribe is a powerful, AI-driven audio-to-text transcription tool designed t
 
 ### 📸 Screenshots
 
-![Home Page](link-to-screenshot1)
+![alt text](image-5.png)
 *Caption: The user-friendly home page of SoundScribe.*
 
-![Transcription in Progress](link-to-screenshot2)
+!![Transcription Results](image-2.png)
 *Caption: Real-time transcription in action.*
 
-![Transcription Results](link-to-screenshot3)
-*Caption: Accurate and neatly formatted transcription results.*
+![About Us](image-3.png)
+*Caption: About Us.*
 
 ---
 

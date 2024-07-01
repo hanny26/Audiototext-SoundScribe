@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
 const AudioToText = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [transcription, setTranscription] = useState('');
@@ -39,7 +38,7 @@ const AudioToText = () => {
         formData,
         {
           headers: {
-            Authorization: `Bearer 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`, // Replace with your actual API token
+            Authorization: `Bearer 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`, // Replace with your actual API tokenhf_uzhMNbUwXQynGAsjRszSqGQucbPMzYOntZ
             'Content-Type': 'multipart/form-data',
           },
         }
@@ -68,23 +67,23 @@ const AudioToText = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form onSubmit={handleSubmit} className="bg-gray-800 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-400">
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="file">
+          <label className="block text-gray-300 text-sm font-bold mb-2" htmlFor="file">
             Upload Audio File
           </label>
           <input 
             type="file" 
             accept="audio/*" 
             onChange={handleFileChange}
-            className="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+            className="block w-full text-sm text-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
           />
         </div>
         <div className="flex items-center justify-between">
           <button 
             type="submit" 
             disabled={loading}
-            className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${loading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
+            className={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${loading ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'} focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-300 ease-in-out transform hover:scale-105`}
           >
             {loading ? 'Transcribing...' : 'Transcribe Audio'}
           </button>
@@ -92,9 +91,9 @@ const AudioToText = () => {
       </form>
       {error && <p className="text-red-500 text-xs italic">{error}</p>}
       {transcription && (
-        <div className="mt-4 p-4 bg-gray-100 rounded">
+        <div className="mt-4 p-4 bg-gray-900 text-gray-200 rounded-lg shadow-inner">
           <h3 className="text-lg font-bold mb-2">Transcription:</h3>
-          <p className="text-gray-700">{transcription}</p>
+          <p className="text-white">{transcription}</p>
         </div>
       )}
     </div>
