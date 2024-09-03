@@ -34,11 +34,11 @@ const AudioToText = () => {
 
     try {
       const response = await axios.post(
-        'https://api-inference.huggingface.co/models/distil-whisper/distil-large-v2',
+        'inference_api',
         formData,
         {
           headers: {
-            Authorization: `Bearer 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`, // Replace with your actual API tokenhf_uzhMNbUwXQynGAsjRszSqGQucbPMzYOntZ
+            Authorization: `bearer_token_in_hugginface`, // Replace with your actual API tokenhf_uzhMNbUwXQynGAsjRszSqGQucbPMzYOntZ
             'Content-Type': 'multipart/form-data',
           },
         }
